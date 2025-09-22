@@ -172,7 +172,7 @@
       
 
       .hero-img img {
-        width: 475px;       /* smaller than 520px */
+        width: 450px;       /* smaller than 520px */
         height: 650px;      /* keeps same 13:11 ratio */
         border-radius: 10px;
         object-fit: cover;
