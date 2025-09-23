@@ -419,6 +419,33 @@
   background: #d95a52;
 }
 
+.projects {
+  padding: 60px 10%;
+  text-align: center;
+}
+
+/* Flex container for horizontal layout */
+.projects-container {
+  display: flex;
+  flex-wrap: wrap;       /* allows wrapping on smaller screens */
+  gap: 20px;             /* spacing between cards */
+  justify-content: center;
+}
+
+.project-card {
+  background: #161b22;
+  padding: 20px;
+  border-radius: 10px;
+  margin: 15px;
+  text-align: left;
+  transition: transform 0.3s;
+}
+
+.project-card:hover {
+  transform: translateY(-5px);
+}
+
+
 /* Contect Me Section */
 .contact {
   text-align: center;
