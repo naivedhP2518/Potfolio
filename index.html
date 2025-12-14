@@ -1,206 +1,149 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Naivedh Patel | Portfolio</title>
-  <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Coming Soon</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+    <style>
+        /* RESET & BASIC SETUP */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            height: 100vh;
+            width: 100%;
+            overflow: hidden;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            /* Animated Gradient Background */
+            background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+            background-size: 400% 400%;
+            animation: gradientBG 15s ease infinite;
+            color: white;
+        }
+
+        /* ANIMATIONS */
+        @keyframes gradientBG {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+
+        @keyframes float {
+            0% { transform: translateY(0px); }
+            50% { transform: translateY(-10px); }
+            100% { transform: translateY(0px); }
+        }
+
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* GLASS CARD STYLING */
+        .glass-card {
+            background: rgba(255, 255, 255, 0.15);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border-radius: 20px;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            padding: 3rem;
+            text-align: center;
+            box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+            max-width: 600px;
+            width: 90%;
+            animation: fadeInUp 1s ease-out;
+        }
+
+        /* ICON STYLING */
+        .gear-icon {
+            font-size: 4rem;
+            margin-bottom: 1rem;
+            display: inline-block;
+            animation: spin 6s linear infinite;
+        }
+
+        .float-icon {
+            font-size: 2rem;
+            position: absolute;
+            animation: float 3s ease-in-out infinite;
+        }
+
+        /* TEXT STYLING */
+        h1 {
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin-bottom: 0.5rem;
+            text-shadow: 0 2px 4px rgba(0,0,0,0.2);
+        }
+
+        p {
+            font-size: 1.1rem;
+            font-weight: 300;
+            margin-bottom: 2rem;
+            opacity: 0.9;
+        }
+
+        /* THE "COMING SOON" BADGE */
+        .status-badge {
+            display: inline-block;
+            background: white;
+            color: #e73c7e;
+            padding: 10px 25px;
+            border-radius: 50px;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+            transition: transform 0.3s ease;
+        }
+
+        .status-badge:hover {
+            transform: scale(1.05);
+            cursor: pointer;
+        }
+
+        /* FOOTER LINK */
+        .footer {
+            margin-top: 2rem;
+            font-size: 0.8rem;
+            opacity: 0.7;
+        }
+    </style>
 </head>
 <body>
-  <!-- Navbar -->
-  <header>
-    <nav class="navbar">
-      <div class="nav-container">
-        <ul class="nav-links">
-          <li><a href="#home" class="active">Home</a></li>
-          <li><a href="#about">About</a></li>
-          <li><a href="#skills">Skills</a></li>
-          <li><a href="#projects">Projects</a></li>
-          <li><a href="#contact">Contact</a></li>
-          <div class="nav-highlight"></div>
-        </ul>
-      </div>
-    </nav>
-    
-    
-  </header>
 
-  <!-- Hero Section -->
-  <section id="home" class="hero">
-    <div class="hero-text">
-      <h3>Hello<span class="dot">.</span></h3>
-      <h1>I’m <span class="name">Naivedh Patel</span></h1>
-      <h2>Information Technology Student | Web Developer</h2>
-      <div class="buttons">
-      </div>
+    <div class="glass-card">
+        <div class="gear-icon">⚙️</div>
+        
+        <h1>Under Maintenance</h1>
+        <p>We are currently upgrading our platform to give you a better experience.</p>
+        
+        <div class="status-badge">
+            Other parts coming soon...
+        </div>
+
+        <div class="footer">
+            &copy; 2025 All Rights Reserved
+        </div>
     </div>
-    <div class="hero-img">
-      <!-- image -->
-      <img src="myphoto.png" alt="Naivedh Patel">
-    </div>
-    
-  </section>
 
-  <!-- About Section -->
-  <section id="about" class="about">
-    <h2>About me</h2>
-    <p>
-      Enthusiastic and detail-oriented B.Tech IT student at Parul University (2025 – Present) with 
-      a strong interest in web development. Passionate about building responsive and user-friendly 
-      websites using modern web technologies. Seeking opportunities to apply my skills in real-world 
-      projects and grow as a professional web developer.
-    </p>
-  </section>
-
-<!-- Skill Section -->
-<section id="skills" class="skills">
-  <h2>Skills</h2>
-  <div class="scroll-container">
-    <div class="scroll-list">
-      <!-- First set -->
-      <div class="tag">HTML</div>
-      <div class="tag">CSS</div>
-      <div class="tag">JavaScript</div>
-      <div class="tag">MySQL</div>
-      <div class="tag">Java</div>
-      <div class="tag">Annguler</div>
-      <div class="tag">React</div>
-      <div class="tag">Node.js</div>
-      <!-- Duplicate set for smooth loop -->
-      <div class="tag">HTML</div>
-      <div class="tag">CSS</div>  
-      <div class="tag">JavaScript</div>
-      <div class="tag">MySQL</div>
-      <div class="tag">Java</div>
-      <div class="tag">Annguler</div>
-      <div class="tag">React</div>
-      <div class="tag">Node.js</div>
-    </div>
-    <div class="fade-left"></div>
-    <div class="fade-right"></div>
-  </div>
-
-  <!-- TOOLS CONTAINER -->
-   <h2>TOOLS Use</h2>
-  <div class="scroll-container">
-    <div class="scroll-track">
-      <!-- First set of logos -->
-      <img src="cursor-Icon.svg" alt="Cursor Icon">
-      <img src="Github-Icon.png" alt="GitHub Icon">
-      <img src="Git-Icon.png" alt="Git Icon">
-      <img src="vscode-Icon.png" alt="VS Code Icon">
-
-      <!-- Duplicate set for infinite loop -->
-      <img src="cursor-Icon.svg" alt="Cursor Icon">
-      <img src="Github-Icon.png" alt="GitHub Icon">
-      <img src="Git-Icon.png" alt="Git Icon">
-      <img src="vscode-Icon.png" alt="VS Code Icon">
-
-        <!-- Duplicate set for infinite loop -->
-        <img src="cursor-Icon.svg" alt="Cursor Icon">
-        <img src="Github-Icon.png" alt="GitHub Icon">
-        <img src="Git-Icon.png" alt="Git Icon">
-        <img src="vscode-Icon.png" alt="VS Code Icon">
-
-      <!-- Duplicate set for infinite loop -->
-      <img src="cursor-Icon.svg" alt="Cursor Icon">
-      <img src="Github-Icon.png" alt="GitHub Icon">
-      <img src="Git-Icon.png" alt="Git Icon">
-      <img src="vscode-Icon.png" alt="VS Code Icon">
-    </div>
-  </div>
-</section>
-  <!-- Projects Section -->
-  <section id="projects" class="projects">
-    <h2>Projects</h2>
-
-    <div class="projects-container">
-      <div class="project-card">
-        <img src="TravelWebpage.png" alt="Project 1 Screenshot">
-        <h3>Travel Website</h3>
-        <p>Developed a responsive travel website with modern navigation and
-          multiple sections to help customers explore packages.</p>
-        <a href="https://naivedhp2518.github.io/travel-web/" class="btn-primary">Live Demo</a>
-      </div>
-    
-      <div class="project-card">
-        <img src="cumproject.png" alt="Project 2 Screenshot">
-        <h3>E-commmerce-website</h3>
-        <p>Developed a responsive e-commerce website with modern navigation, 
-          offering a wide range of resources to enhance user experience and provide helpful accessories.</p>
-        <a href="https://naivedhp2518.github.io/E-commmerce-website/" class="btn-primary">Live Demo</a>
-      </div>
-    
-      <div class="project-card">
-        <img src="keepnotes.png" alt="Project 3 Screenshot">
-        <h3>Keep Notes</h3>
-        <p>Developed a responsive Notes app with modern navigation, 
-          provide a features to keep notes also there is add private notes feature.</p>
-        <a href="https://naivedhp2518.github.io/Keep-Notes-/" class="btn-primary">Live Demo</a>
-      </div>
-    
-      <div class="project-card">
-        <img src="temp.png" alt="Project 4 Screenshot">
-        <h3>Temperature Converter</h3>
-        <p>Developed a responsive Logistics and Delivery webpage, 
-          offering tools to easily track parcels and get shipping quotes</p>
-        <a href="https://naivedhp2518.github.io/Temperature-Converter/" class="btn-primary">Live Demo</a>
-      </div>
-
-      <div class="project-card">
-        <img src="Homeship.png" alt="Project 4 Screenshot">
-        <h3>courier website</h3>
-        <p>Developed a responsive courier website, 
-          provides features to calculate Temperature in different parameters.</p>
-        <a href="https://naivedhp2518.github.io/courier-website/" class="btn-primary">Live Demo</a>
-      </div>
-
-      <div class="project-card">
-        <img src="renatal.png" alt="Project 4 Screenshot">
-        <h3>Rental website</h3>
-        <p>Developed a responsive Rental Listing platform, 
-          enabling users to discover and compare different rental properties in their desired area.</p>
-        <a href="https://naivedhp2518.github.io/Rental-Web-Page/home.html" class="btn-primary">Live Demo</a>
-      </div>
-
-    </div>
-    
-  </section>
-
-  <!-- Contact Section -->
-  <section id="contact" class="contact">
-    <h2>Contact Me</h2>
-    <div class="contact-items">
-      <div class="contact-box">
-        <a href="tel:+91 93130 96998">
-          <img src="Phone-Icon.png" alt="Phone Icon"> +91 93130 96998
-        </a>
-      </div>
-    
-      <div class="contact-box">
-        <a href="mailto:naivedhpatel2518@gmail.com">
-          <img src="Gmail-Icon.png" alt="Email Icon"> naivedhpatel2518@gmail.com
-        </a>
-      </div>
-    
-      <div class="contact-box">
-        <a href="https://www.linkedin.com/in/naivedh-falgunbhai-patel-058621352/" target="_blank">
-          <img src="Linkedin-Icon.png" alt="LinkedIn Icon"> Naivedh Patel
-        </a>
-      </div>
-    
-      <div class="contact-box">
-        <a href="https://github.com/naivedhP2518" target="_blank">
-          <img src="Github-Icon.png" alt="GitHub Icon"> naivedhP2518
-        </a>
-      </div>
-    </div>
-    
-  </section>
-
-  <footer>
-    <p>© 2025 Naivedh Patel | All Rights Reserved</p>
-  </footer>
-  <script src="script.js"></script>
 </body>
 </html>
