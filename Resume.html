@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Resume | Naivedh Patel</title>
+  
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+
+  <style>
+    :root {
+      --bg-color: #050505;
+      --text-main: #e0e0e0;
+      --text-muted: #a0a0a0;
+      --accent: #bf5af2;
+      --border-color: #222;
+    }
+    
+    /* Global Resets */
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    ul { list-style: none; }
+    a { text-decoration: none; }
+
+    body { 
+      font-family: 'Poppins', sans-serif; 
+      background: radial-gradient(ellipse at center, #1a1a1a 0%, #000000 100%); 
+      background-attachment: fixed; 
+      color: var(--text-main); 
+      display: flex; 
+      flex-direction: column; 
+      min-height: 100vh; 
+    }
+    
+    /* --- NAVBAR --- */
+    .navbar { 
+      position: fixed; 
+      top: 0; 
+      left: 0; 
+      width: 100%; 
+      padding: 10px 50px; 
+      background: rgba(5, 5, 5, 0.85); 
+      backdrop-filter: blur(15px); 
+      z-index: 1000; 
+      border-bottom: 1px solid rgba(255,255,255,0.05); 
+      display: flex; 
+      justify-content: center; 
+      align-items: center; 
+    }
+    .nav-container { 
+      width: 100%; 
+      max-width: 1200px; 
+      display: flex; 
+      justify-content: space-between; 
+      align-items: center; 
+    }
+    .logo img { height: 45px; display: block; }
+    
+    .nav-links { 
+      display: flex; 
+      gap: 30px; 
+    }
+    .nav-links li a { 
+      color: var(--text-main); 
+      font-size: 15px; 
+      font-weight: 500; 
+      text-transform: uppercase; 
+      letter-spacing: 1px; 
+      transition: color 0.3s ease;
+    }
+    .nav-links li a:hover { 
+      color: var(--accent); 
+    }
+
+    /* --- RESUME VIEWER --- */
+    .resume-container { 
+      flex: 1; 
+      padding: 120px 10% 40px; 
+      display: flex; 
+      flex-direction: column; 
+      align-items: center; 
+    }
+    .resume-header { 
+      text-align: center; 
+      margin-bottom: 30px; 
+    }
+    .resume-header h1 { 
+      font-size: 36px; 
+      font-weight: 800; 
+    }
+    .resume-header h1 span { 
+      color: var(--accent); 
+    }
+    
+    #typing-text { 
+      color: var(--accent); 
+      font-weight: 600; 
+    }
+    .typing-cursor { 
+      display: inline-block; 
+      width: 2px; 
+      height: 1.2em; 
+      background-color: var(--accent); 
+      margin-left: 5px; 
+      vertical-align: middle; 
+      animation: blink 0.7s infinite; 
+    }
+    @keyframes blink { 
+      0%, 100% { opacity: 1; } 
+      50% { opacity: 0; } 
+    }
+
+    .resume-viewer-wrapper { 
+      width: 100%; 
+      max-width: 900px; 
+      height: 75vh; 
+      border: 1px solid var(--border-color); 
+      border-radius: 12px; 
+      overflow: hidden; 
+      box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+    }
+    iframe { 
+      width: 100%; 
+      height: 100%; 
+      border: none; 
+    }
+
+    .download-btn { 
+      margin-top: 30px; 
+      background: var(--accent); 
+      color: #fff; 
+      padding: 12px 25px; 
+      border-radius: 6px; 
+      font-weight: 600; 
+      transition: background 0.3s ease, transform 0.3s ease;
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+    }
+    .download-btn:hover {
+      background: #fff;
+      color: var(--accent);
+      transform: translateY(-2px);
+    }
+
+    footer { 
+      text-align: center; 
+      padding: 20px; 
+      color: #555; 
+      border-top: 1px solid var(--border-color); 
+    }
+
+    @media (max-width: 768px) {
+      .navbar { padding: 10px 20px; }
+      .nav-links { gap: 15px; }
+      .nav-links li a { font-size: 13px; }
+    }
+  </style>
+</head>
+<body>
+  <nav class="navbar">
+    <div class="nav-container">
+      <a href="index.html" class="logo"><img src="logo.png" alt="Logo"></a>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="project.html">Project</a></li>
+        <li><a href="edition.html">Editions</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <main class="resume-container">
+    <div class="resume-header">
+      <h1>My <span>Resume</span></h1>
+      <p>I am <span id="typing-text"></span><span class="typing-cursor"></span></p>
+    </div>
+    <div class="resume-viewer-wrapper">
+      <iframe src="Resume Naivedh Patel.pdf"></iframe>
+    </div>
+    <a href="Resume Naivedh Patel.pdf" download class="download-btn">
+      <i class='bx bxs-download'></i> Download PDF
+    </a>
+  </main>
+
+  <footer><p>© 2025 Naivedh Patel | All Rights Reserved</p></footer>
+
+  <script>
+    const textElement = document.getElementById("typing-text");
+    const phrases = ["Web Developer", "Video Editor"];
+    let pIdx = 0; let cIdx = 0; let isDel = false;
+    function type() {
+      const cur = phrases[pIdx];
+      textElement.textContent = cur.substring(0, isDel ? cIdx-- : cIdx++);
+      let speed = isDel ? 75 : 150;
+      if (!isDel && cIdx > cur.length) { speed = 2000; isDel = true; }
+      else if (isDel && cIdx < 0) { isDel = false; pIdx = (pIdx + 1) % phrases.length; cIdx = 0; speed = 500; }
+      setTimeout(type, speed);
+    }
+    window.onload = type;
+  </script>
+</body>
+</html>

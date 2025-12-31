@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Projects | Naivedh Patel</title>
+  
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+
+  <style>
+    :root {
+      --bg-color: #050505;
+      --text-main: #e0e0e0;
+      --text-muted: #a0a0a0;
+      --accent: #bf5af2;
+      --gradient-text: linear-gradient(45deg, #bf5af2, #64d2ff);
+      --border-color: #222;
+    }
+
+    * { margin: 0; padding: 0; box-sizing: border-box; scroll-behavior: smooth; }
+
+    body { 
+      font-family: 'Poppins', sans-serif; 
+      background: radial-gradient(ellipse at center, #1a1a1a 0%, #000000 100%); 
+      background-attachment: fixed; 
+      color: var(--text-main); 
+      line-height: 1.6; 
+      overflow-x: hidden; 
+    }
+    
+    /* Remove default list styles (bullets) and link styles (underlines) globally */
+    ul { list-style: none; }
+    a { text-decoration: none; }
+
+    /* --- NAVBAR (EXACT MATCH TO INDEX) --- */
+    .navbar {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      padding: 10px 50px;
+      background: rgba(5, 5, 5, 0.85);
+      backdrop-filter: blur(15px);
+      z-index: 1000;
+      border-bottom: 1px solid rgba(255,255,255,0.05);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .nav-container {
+      width: 100%;
+      max-width: 1200px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .logo img {
+      height: 45px;
+      display: block;
+      transition: 0.3s;
+    }
+
+    .logo img:hover {
+      filter: drop-shadow(0 0 8px var(--accent));
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 30px;
+      /* Double ensuring no bullets */
+      list-style-type: none; 
+    }
+
+    .nav-links li a {
+      color: var(--text-main);
+      font-size: 15px;
+      font-weight: 500;
+      padding: 5px 0;
+      transition: color 0.3s ease;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      /* Double ensuring no underlines */
+      text-decoration: none; 
+      display: inline-block;
+    }
+
+    .nav-links li a:hover {
+      color: var(--accent);
+    }
+
+    /* --- PROJECTS SECTION --- */
+    .projects-section { padding: 120px 10% 80px; min-height: 100vh; }
+    .section-title { font-size: 42px; text-align: center; margin-bottom: 60px; font-weight: 800; }
+    .section-title span { color: var(--accent); }
+    
+    .projects-container { 
+      display: grid; 
+      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); 
+      gap: 30px; 
+    }
+    
+    .project-card { 
+      background: rgba(18, 18, 18, 0.7); 
+      backdrop-filter: blur(10px); 
+      border: 1px solid var(--border-color); 
+      border-radius: 12px; 
+      padding: 25px; 
+      transition: 0.4s; 
+      display: flex;
+      flex-direction: column;
+    }
+
+    .project-card:hover { 
+      transform: translateY(-10px); 
+      border-color: var(--accent); 
+      box-shadow: 0 10px 30px rgba(191, 90, 242, 0.15);
+    }
+
+    .project-card img { 
+      width: 100%; 
+      height: 200px; 
+      object-fit: cover; 
+      border-radius: 8px; 
+      margin-bottom: 20px; 
+      filter: brightness(0.9);
+      transition: 0.3s;
+    }
+
+    .project-card:hover img { filter: brightness(1); }
+    
+    .project-card h3 { font-size: 22px; margin-bottom: 12px; color: #fff; }
+    .project-card p { font-size: 15px; color: var(--text-muted); margin-bottom: 25px; flex-grow: 1; }
+    
+    .btn-primary { 
+      display: block; 
+      background: var(--accent); 
+      color: #fff; 
+      padding: 12px; 
+      border-radius: 6px; 
+      text-align: center; 
+      font-weight: 600; 
+      transition: 0.3s;
+    }
+
+    .btn-primary:hover { 
+      background: #fff; 
+      color: var(--accent); 
+    }
+
+    footer { text-align: center; padding: 50px; color: #555; border-top: 1px solid var(--border-color); }
+
+    @media (max-width: 768px) {
+      .navbar { padding: 10px 20px; }
+      .nav-links { gap: 15px; }
+      .section-title { font-size: 32px; }
+    }
+  </style>
+</head>
+<body>
+  <nav class="navbar">
+    <div class="nav-container">
+      <a href="index.html" class="logo">
+        <img src="logo.png" alt="Logo">
+      </a>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="edition.html">Editions</a></li>
+        <li><a href="resume.html">Resume</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <section class="projects-section">
+    <h1 class="section-title">My <span>Portfolio</span></h1>
+    <div class="projects-container">
+      <!-- Project 1 -->
+      <div class="project-card">
+        <img src="Travel.png" alt="Travel Website">
+        <h3>Travel Website</h3>
+        <p>A responsive travel website with modern navigation, featuring multiple sections to help customers explore travel packages.</p>
+        <a href="https://naivedhp2518.github.io/travel-web/" class="btn-primary" target="_blank"><i class='bx bx-link-external'></i> Live Demo</a>
+      </div>
+      
+      <!-- Project 2 -->
+      <div class="project-card">
+        <img src="E-commerce.png" alt="E-commerce Website">
+        <h3>E-commerce Website</h3>
+        <p>A fully responsive e-commerce platform offering a wide range of products with a user-friendly shopping interface.</p>
+        <a href="https://naivedhp2518.github.io/E-commmerce-website/" class="btn-primary" target="_blank"><i class='bx bx-link-external'></i> Live Demo</a>
+      </div>
+      
+      <!-- Project 3 -->
+      <div class="project-card">
+        <img src="keep-notes.png" alt="Keep Notes App">
+        <h3>Keep Notes App</h3>
+        <p>A dynamic notes application allowing users to create, organize, and store private notes securely.</p>
+        <a href="https://naivedhp2518.github.io/Keep-Notes-/" class="btn-primary" target="_blank"><i class='bx bx-link-external'></i> Live Demo</a>
+      </div>
+      
+      <!-- Project 4 -->
+      <div class="project-card">
+        <img src="temp.png" alt="Temperature Converter">
+        <h3>Temperature Converter</h3>
+        <p>A utility tool that allows users to quickly convert temperatures between Celsius, Fahrenheit, and Kelvin.</p>
+        <a href="https://naivedhp2518.github.io/Temperature-Converter/" class="btn-primary" target="_blank"><i class='bx bx-link-external'></i> Live Demo</a>
+      </div>
+
+      <!-- Project 5 -->
+      <div class="project-card">
+        <img src="curier.png"  alt="Courier Website">
+        <h3>Courier Service Web</h3>
+        <p>A logistics and delivery webpage offering tools to track parcels and estimate shipping quotes efficiently.</p>
+        <a href="https://naivedhp2518.github.io/courier-website/" class="btn-primary" target="_blank"><i class='bx bx-link-external'></i> Live Demo</a>
+      </div>
+
+      <!-- Project 6 -->
+      <div class="project-card">
+        <img src="Rental.png" alt="Rental Website">
+        <h3>Rental Listing Platform</h3>
+        <p>Enables users to discover and compare different rental properties in their desired area with ease.</p>
+        <a href="https://naivedhp2518.github.io/Rental-Web-Page/home.html" class="btn-primary" target="_blank"><i class='bx bx-link-external'></i> Live Demo</a>
+      </div>
+    </div>
+  </section>
+
+  <footer><p>© 2025 Naivedh Patel | All Rights Reserved</p></footer>
+</body>
+</html>

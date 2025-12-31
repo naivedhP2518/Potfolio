@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gallery | Naivedh Patel</title>
+  
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+
+  <style>
+    :root {
+      --bg-color: #050505;
+      --card-bg: #121212;
+      --text-main: #e0e0e0;
+      --text-muted: #a0a0a0;
+      --accent: #bf5af2;
+      --gradient-text: linear-gradient(45deg, #bf5af2, #64d2ff);
+      --border-color: #222;
+    }
+
+    /* Global Resets */
+    * { margin: 0; padding: 0; box-sizing: border-box; scroll-behavior: smooth; }
+    ul { list-style: none; }
+    a { text-decoration: none; }
+
+    body {
+      font-family: 'Poppins', sans-serif;
+      background: radial-gradient(ellipse at center, #1a1a1a 0%, #000000 100%);
+      background-attachment: fixed;
+      color: var(--text-main);
+      line-height: 1.6;
+      overflow-x: hidden;
+    }
+
+    /* --- NAVBAR --- */
+    .navbar {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      padding: 10px 50px;
+      background: rgba(5, 5, 5, 0.85);
+      backdrop-filter: blur(15px);
+      z-index: 1000;
+      border-bottom: 1px solid rgba(255,255,255,0.05);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .nav-container {
+      width: 100%;
+      max-width: 1200px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .logo img { height: 45px; display: block; transition: 0.3s; }
+    .logo img:hover { filter: drop-shadow(0 0 8px var(--accent)); }
+
+    .nav-links { display: flex; gap: 30px; }
+    .nav-links li a {
+      color: var(--text-main);
+      font-size: 15px;
+      font-weight: 500;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      transition: 0.3s;
+    }
+    .nav-links li a:hover { color: var(--accent); }
+
+    /* --- GALLERY SECTION --- */
+    .editions-section { padding: 120px 10% 80px; min-height: 100vh; }
+    
+    .section-title {
+      font-size: 42px;
+      margin-bottom: 60px;
+      color: var(--text-main);
+      text-align: center;
+      font-weight: 800;
+    }
+    .section-title span { color: var(--accent); }
+
+    .video-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+      gap: 30px;
+      align-items: start; /* Ensures cards don't stretch to unequal heights */
+    }
+
+    .video-card {
+      background: rgba(18, 18, 18, 0.7);
+      backdrop-filter: blur(10px);
+      border: 1px solid var(--border-color);
+      border-radius: 12px;
+      padding: 15px;
+      transition: 0.4s;
+      height: auto;
+    }
+
+    .video-card:hover {
+      transform: translateY(-10px);
+      border-color: var(--accent);
+      box-shadow: 0 10px 30px rgba(191, 90, 242, 0.15);
+    }
+
+    .video-wrapper {
+      width: 100%;
+      background: #000;
+      border-radius: 8px;
+      margin-bottom: 15px;
+      overflow: hidden;
+      /* Removed aspect-ratio: 16/9 to allow original aspect ratio */
+    }
+
+    .video-wrapper video {
+      width: 100%;
+      height: auto; /* Allows height to be determined by the file's aspect ratio */
+      display: block;
+      object-fit: contain; /* Ensures no cropping occurs */
+    }
+
+    .video-info h3 { font-size: 18px; color: #fff; margin-bottom: 5px; }
+    .video-info p { font-size: 13px; color: var(--text-muted); }
+
+    footer { text-align: center; padding: 50px; border-top: 1px solid var(--border-color); color: #555; font-size: 14px; }
+
+    @media (max-width: 768px) {
+      .navbar { padding: 10px 20px; }
+      .section-title { font-size: 32px; }
+      .nav-links { gap: 15px; }
+    }
+  </style>
+</head>
+<body>
+
+  <nav class="navbar">
+    <div class="nav-container">
+      <a href="index.html" class="logo">
+        <img src="logo.png" alt="Logo">
+      </a>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="project.html">Project</a></li>
+        <li><a href="edition.html">Editions</a></li>
+        <li><a href="resume.html">Resume</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <section class="editions-section">
+    <h1 class="section-title">Video <span>Gallery</span></h1>
+
+    <div class="video-grid">
+      <!-- Video Item 1 -->
+      <div class="video-card">
+        <div class="video-wrapper">
+          <video controls preload="metadata">
+            <source src="Kanha.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+          </video>
+        </div>
+        <div class="video-info">
+          <h3>Kanha</h3>
+          <p>Cinematic video edit and motion graphics.</p>
+        </div>
+      </div>
+      
+      <!-- Video Item 2 -->
+      <div class="video-card">
+        <div class="video-wrapper">
+          <video controls preload="metadata">
+            <source src="2025 Recap.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+          </video>
+        </div>
+        <div class="video-info">
+          <h3>2025 Recap</h3>
+          <p>A compilation of the best moments from the year 2025.</p>
+        </div>
+      </div>
+      
+      <!-- Video Item 3 -->
+      <div class="video-card">
+        <div class="video-wrapper">
+          <video controls preload="metadata">
+            <source src="pralayam.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+          </video>
+        </div>
+        <div class="video-info">
+          <h3>Pralayam</h3>
+          <p>Dramatic editing featuring powerful visual effects.</p>
+        </div>
+      </div>
+
+      <!-- Video Item 4 -->
+      <div class="video-card">
+        <div class="video-wrapper">
+          <video controls preload="metadata">
+            <source src="Rejected.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+          </video>
+        </div>
+        <div class="video-info">
+          <h3>Rejected</h3>
+          <p>Alternative edits and experimental video styles.</p>
+        </div>
+      </div>
+
+      <!-- Video Item 5 -->
+      <div class="video-card">
+        <div class="video-wrapper">
+          <video controls preload="metadata">
+            <source src="lyrics based video.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+          </video>
+        </div>
+        <div class="video-info">
+          <h3>Lyrics Based Video</h3>
+          <p>Creative typography and rhythm-based lyric animation.</p>
+        </div>
+      </div>
+
+      <!-- Video Item 6 -->
+      <div class="video-card">
+        <div class="video-wrapper">
+          <video controls preload="metadata">
+            <source src="multi image edition.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+          </video>
+        </div>
+        <div class="video-info">
+          <h3>Multi Image Edition</h3>
+          <p>High-energy aura video featuring multi-image syn                   chronization.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <p>© 2025 Naivedh Patel | All Rights Reserved</p>
+  </footer>
+
+</body>
+</html>
